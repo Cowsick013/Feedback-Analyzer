@@ -21,7 +21,7 @@ Trinethra is a web application that takes a supervisor's spoken or written trans
 
 ```bash
 # 1. Clone the repo
-git clone <your-repo-url>
+git clone https://github.com/Cowsick013/Feedback-Analyzer
 cd trinethra
 
 # 2. Install backend dependencies
