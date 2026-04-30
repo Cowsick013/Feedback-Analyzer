@@ -1,0 +1,12 @@
+We use node-fetch@2 specifically — version 3 doesn't work with CommonJS require() on Windows without extra config.
+
+
+"During testing I discovered the model was penalizing Fellows based on 
+supervisor tone rather than actual behavior. For example, a Fellow who 
+built a defect tracking system broken down by batch, machine and operator
+ was scored 6 because the supervisor sounded unsatisfied — when the correct 
+ score was 7. I fixed this by adding explicit bias detection rules to the prompt
+  that separate supervisor tone from Fellow behavior evidence."
+
+  This project is submitted as part of a recruitment assignment.
+Unauthorized commercial use or redistribution without permission is not allowed.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinethra — Supervisor Feedback Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Trinethra</h1>
+    <p>Supervisor Feedback Analyzer — DeepThought Fellow Evaluation</p>
+  </header>
+
+  <main>
+
+    <!-- INPUT SECTION -->
+    <section id="input-section">
+      <label for="transcript">Paste Supervisor Transcript</label>
+      <textarea 
+        id="transcript" 
+        rows="12" 
+        placeholder="Paste the full supervisor transcript here...&#10;&#10;Minimum 50 characters required.">
+      </textarea>
+      <button id="analyze-btn">Analyze Transcript</button>
+    </section>
+
+    <!-- ERROR BANNER -->
+    <div id="error-banner" class="hidden">
+      <span id="error-text"></span>
+    </div>
+
+    <!-- LOADING STATE -->
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Sending to Ollama · Validating output · Applying guardrails…</p>
+    </div>
+
+    <!-- RESULTS — hidden until analysis completes -->
+    <section id="results" class="hidden">
+
+      <!-- Score Card -->
+      <div class="card" id="score-card">
+        <h2>Performance Score</h2>
+        <div id="score-content"></div>
+      </div>
+
+      <!-- Evidence Card -->
+      <div class="card" id="evidence-card">
+        <h2>Evidence from Transcript</h2>
+        <div id="evidence-content"></div>
+      </div>
+
+      <!-- KPI Mapping Card -->
+      <div class="card" id="kpi-card">
+        <h2>KPI Mapping</h2>
+        <div id="kpi-content"></div>
+      </div>
+
+      <!-- Gap Analysis Card -->
+      <div class="card" id="gaps-card">
+        <h2>Gap Analysis</h2>
+        <div id="gaps-content"></div>
+      </div>
+
+      <!-- Follow-up Questions Card -->
+      <div class="card" id="questions-card">
+        <h2>Follow-up Questions</h2>
+        <div id="questions-content"></div>
+      </div>
+
+      <!-- Meta / AI Health Card -->
+      <div class="card" id="meta-card">
+        <h2>AI Output Health</h2>
+        <div id="meta-content"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
